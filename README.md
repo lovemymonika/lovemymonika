@@ -1,8 +1,8 @@
-# Facebook Business SDK for NodeJS
+# gopl
 
-[![npm](https://img.shields.io/npm/v/facebook-nodejs-business-sdk)](https://www.npmjs.com/package/facebook-nodejs-business-sdk)
-[![License](https://img.shields.io/badge/license-Facebook%20Platform-blue.svg?style=flat-square)](https://github.com/facebook/facebook-nodejs-business-sdk/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/facebook/facebook-nodejs-business-sdk/ci.yml)](https://github.com/facebook/facebook-nodejs-business-sdk/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/gopl)](https://www.npmjs.com/package/gopl)
+[![License](https://img.shields.io/badge/license-Facebook%20Platform-blue.svg?style=flat-square)](https://github.com/facebook/gopl/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/facebook/gopl/ci.yml)](https://github.com/facebook/gopl/actions/workflows/ci.yml)
 
 ### Introduction
 
@@ -63,11 +63,11 @@ to get an access token.
 
 NPM
 
-`npm install --save facebook-nodejs-business-sdk`
+`npm install --save gopl`
 
 Bower
 
-`bower install --save facebook-nodejs-business-sdk`
+`bower install --save gopl`
 
 ## Usage
 
@@ -83,7 +83,7 @@ Refer to our <a href="https://developers.facebook.com/docs/facebook-login/access
 For now, we can use the <a href="https://developers.facebook.com/tools/explorer" target="_blank">Graph Explorer</a> to get an access token.
 
 ```javaScript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 ```
@@ -99,7 +99,7 @@ Facebook Ads entities are defined as classes under the `src/objects` directory.
 
 ```javascript
 // instantiating an object
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const AdAccount = adsSdk.AdAccount;
 const account = new AdAccount('act_<AD_ACCOUNT_ID>');
 console.log(account.id) // fields can be accessed as properties
@@ -112,7 +112,7 @@ The fields are stored within node object classes which are stored under the `src
 You can access object properties like this:
 
 ```javaScript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const AdAccount = adsSdk.AdAccount;
@@ -138,7 +138,7 @@ account
 #### Read Objects
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const AdAccount = adsSdk.AdAccount;
@@ -157,7 +157,7 @@ Requesting an high number of fields may cause the response time to visibly incre
 #### Create Objects
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const AdAccount = adsSdk.AdAccount;
@@ -181,7 +181,7 @@ account
 #### Update Objects
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const Campaign = adsSdk.Campaign;
@@ -195,7 +195,7 @@ new Campaign(campaignId, {
 #### Delete Objects
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const Campaign = adsSdk.Campaign;
@@ -211,7 +211,7 @@ Here cursors are defined as in `src\cursor.js`. When fetching nodes related to a
 Here the `Cursor` is a superpowered `Array` (with all it's native helpful operations) with `next` and `previous` methods that when resolved fills itself with the new set of objects.
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 const AdAccount = adsSdk.AdAccount;
@@ -266,7 +266,7 @@ void async function () {
 A `FacebookAdsApi` object offers a debugging mode that will log all requests. To enable it just call `api.setDebug(true)` on an API instance.
 
 ```javascript
-const adsSdk = require('facebook-nodejs-business-sdk');
+const adsSdk = require('gopl');
 const accessToken = '<VALID_ACCESS_TOKEN>';
 const api = adsSdk.FacebookAdsApi.init(accessToken);
 api.setDebug(true);
