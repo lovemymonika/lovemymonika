@@ -1,4 +1,4 @@
-# gopl
+# lovemymonika
 
 [![npm](https://img.shields.io/npm/v/gopl)](https://www.npmjs.com/package/gopl)
 [![License](https://img.shields.io/badge/license-Facebook%20Platform-blue.svg?style=flat-square)](https://github.com/facebook/gopl/blob/main/LICENSE)
